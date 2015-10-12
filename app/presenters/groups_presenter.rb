@@ -4,9 +4,7 @@ class GroupsPresenter
     @current_user = current_user
   end
 
-  def name
-    group.name
-  end
+  delegate :name, to: :group
 
   def create_sub_group_button(view)
     view.link_to 'Create Sub-Group',
